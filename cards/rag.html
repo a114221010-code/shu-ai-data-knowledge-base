@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>檢索增強生成 RAG｜AI 應用與資料分析知識庫</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back" href="../index.html">← 返回首頁</a>
+    <article class="card">
+      <div class="tags">
+        <span class="tag tone-purple">AI 應用</span>
+        <span class="tag tone-teal">入門</span>
+      </div>
+      <h1>檢索增強生成 RAG</h1>
+      <p class="subtitle">Retrieval-Augmented Generation</p>
+
+      <section class="box banner tone-blue">
+        <h2 class="field-title" data-icon="◆">一句話定義</h2>
+        <p>讓 AI 先查資料，再根據查到的內容回答問題。</p>
+      </section>
+
+      <div class="grid-2">
+        <section class="box tone-teal">
+          <h2 class="field-title" data-icon="✦">白話解釋</h2>
+          <p>一般的 AI 只靠訓練時學到的知識回答，遇到最新消息或公司內部資料就容易答錯。RAG 的做法像開書考試：收到問題後，先到指定的資料庫裡找出最相關的段落，再把這些段落和問題一起交給 AI，請它根據資料整理出答案。這樣答案有依據，資料更新時也不用重新訓練模型。</p>
+        </section>
+        <section class="box tone-amber">
+          <h2 class="field-title" data-icon="!">常見誤解</h2>
+          <ul>
+            <li>誤解：RAG 就是微調模型。正解：RAG 不會改變模型本身，只是在回答前額外提供資料；微調則是用資料重新訓練模型。</li>
+            <li>誤解：用了 RAG 就不會答錯。正解：如果找到的資料不相關或不完整，答案仍然可能出錯，所以檢索品質很重要。</li>
+          </ul>
+        </section>
+        <section class="box tone-purple">
+          <h2 class="field-title" data-icon="◈">實務應用情境</h2>
+          <ul>
+            <li>企業客服：根據產品手冊與常見問題回答客戶。</li>
+            <li>內部知識庫問答：員工詢問請假、報帳等規定時，從公司文件中找答案。</li>
+            <li>法規查詢：根據法條內容回答問題，減少 AI 憑空捏造。</li>
+          </ul>
+        </section>
+        <section class="box tone-coral">
+          <h2 class="field-title" data-icon="‹›">範例</h2>
+          <p>使用者問「請假規定是什麼？」，系統先到公司規章中檢索相關段落，再請 AI 根據段落回答。</p>
+          <pre><code>question = "請假規定是什麼？"
+docs = search(knowledge_base, question)  # 1. 檢索
+answer = llm(question, context=docs)     # 2. 生成</code></pre>
+        </section>
+      </div>
+
+      <div class="grid-3">
+        <section class="box tone-pink">
+          <h2 class="field-title" data-icon="↗">我的實作連結</h2>
+          <p><a href="https://colab.research.google.com/drive/1ZEi6IbYI5Q7QOhKtK-AyBrl9ndiZCCqK?usp=sharing" target="_blank" rel="noopener">RAG 對話機器人作業（Google Colab）</a></p>
+        </section>
+        <section class="box tone-blue">
+          <h2 class="field-title" data-icon="#">相關名詞</h2>
+          <p>向量資料庫 Vector Database、嵌入 Embedding、大型語言模型 LLM</p>
+        </section>
+        <section class="box tone-teal">
+          <h2 class="field-title" data-icon="▤">延伸閱讀</h2>
+          <p><a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks（RAG 原始論文）</a></p>
+        </section>
+      </div>
+    </article>
+  </main>
+</body>
+</html>

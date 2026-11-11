@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>結構化查詢語言 SQL｜AI 應用與資料分析知識庫</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back" href="../index.html">← 返回首頁</a>
+    <article class="card">
+      <div class="tags">
+        <span class="tag tone-purple">資料處理</span>
+        <span class="tag tone-teal">入門</span>
+      </div>
+      <h1>結構化查詢語言 SQL</h1>
+      <p class="subtitle">Structured Query Language</p>
+
+      <section class="box banner tone-blue">
+        <h2 class="field-title" data-icon="◆">一句話定義</h2>
+        <p>用來向資料庫查詢、新增、修改資料的標準語言。</p>
+      </section>
+
+      <div class="grid-2">
+        <section class="box tone-teal">
+          <h2 class="field-title" data-icon="✦">白話解釋</h2>
+          <p>資料庫像一個很大的 Excel 檔案，裡面有很多張資料表。SQL 就是你和資料庫溝通的語言：用幾行指令告訴它「我要哪些欄位、要符合什麼條件、要怎麼排序」，它就把結果整理好交給你。資料量再大，也能快速篩選、統計與合併，所以是資料分析最基本的工具之一。</p>
+        </section>
+        <section class="box tone-amber">
+          <h2 class="field-title" data-icon="!">常見誤解</h2>
+          <ul>
+            <li>誤解：SQL 是一種資料庫軟體。正解：SQL 是查詢語言，MySQL、PostgreSQL、SQLite 才是使用這種語言的資料庫系統。</li>
+            <li>誤解：SQL 只有工程師才需要會。正解：資料分析、產品與營運等工作常用 SQL 自己取得數字，不必每次都請工程師幫忙。</li>
+          </ul>
+        </section>
+        <section class="box tone-purple">
+          <h2 class="field-title" data-icon="◈">實務應用情境</h2>
+          <ul>
+            <li>銷售分析：統計每月各商品的銷售額，找出熱賣與滯銷品。</li>
+            <li>使用者分析：計算活躍使用者數與留存率，作為產品決策的依據。</li>
+            <li>報表自動化：定期從資料庫取得資料，提供給 BI 工具產生報表。</li>
+          </ul>
+        </section>
+        <section class="box tone-coral">
+          <h2 class="field-title" data-icon="‹›">範例</h2>
+          <p>查出銷售額最高的前 5 名商品。</p>
+          <pre><code>SELECT product_name, SUM(amount) AS total
+FROM orders
+GROUP BY product_name
+ORDER BY total DESC
+LIMIT 5;</code></pre>
+        </section>
+      </div>
+
+      <div class="grid-3">
+        <section class="box tone-pink">
+          <h2 class="field-title" data-icon="↗">我的實作連結</h2>
+          <p>待補充</p>
+        </section>
+        <section class="box tone-blue">
+          <h2 class="field-title" data-icon="#">相關名詞</h2>
+          <p>關聯式資料庫 Relational Database、資料表 Table、BI 商業智慧</p>
+        </section>
+        <section class="box tone-teal">
+          <h2 class="field-title" data-icon="▤">延伸閱讀</h2>
+          <p><a href="https://www.w3schools.com/sql/" target="_blank" rel="noopener">W3Schools SQL Tutorial</a></p>
+        </section>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
